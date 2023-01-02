@@ -1,0 +1,56 @@
+comandos básicos de navegação no terminal:
+
+Windows:
+cd -> navega entre as pastas: cd/ linux = cd/
+cd.. volta pro repositório anterior
+
+dir -> lista os diretórios da pasta atual / linux = ls
+mkdir -> cria uma pasta (mkdir workspace)
+del/rmdir -> del: deleta arquivos dentro da pasta ex: cd/del workspace
+cls -> limpa a tela windows/ linux = clear
+tab -> auto completa os comandos
+
+echo hello
+echo hello > hello.txt (cria um arquivo dentro da pasta)
+rmdir workspace /S /Q -> remove a pasta e todos arquivos dentro dela
+rm - rf -> deleta tudo no linux
+
+sha1 -> algoritmo de hash seguro, de encriptação.
+ex: echo "ola mundo" | openssl sha1 -> encripta o arquivo.
+
+blobs:
+echo 'conteudo'
+git hash-object --stdin -> mostra o sha1 do conteudo
+
+tree: armazenam blobs
+
+commit: -> junta todas as informações
+
+git init -> inicia o git dentro da pasta
+
+git add * -> coloca todos arquivos em modo stage
+
+git commit - m "commit inicial" -> faz o commit com uma descrição
+
+tracked -> unmodified, modified, staged
+git add arquivo.md receitas/ : coloca o arquivo em staged
+
+após colocar staged você commita
+
+git commit -m "cria pasta receitas, move arquivo para receitas"
+
+echo > readme.md : cria arquivo
+
+git add * -> move tudo que tiver para staged
+
+git remote add origin https://github.com/guisoLazaro/livro-receitas.git -> aponta para o repositorio remoto
+
+git remote -v -> lista os repositorios remotos cadastrados
+
+git pull origin master - > puxa o arquivo do git hub para o computador
+
+git clone "link do git" -> clona o repositório do git pro computador
+
+----------------------------------------------------------
+
+

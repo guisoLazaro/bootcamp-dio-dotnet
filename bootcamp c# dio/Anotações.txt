@@ -1,0 +1,8 @@
+Como construir um algoritmo:
+
+Compreenção do problema
+definição dos dados de entrada
+definir processamento
+definir dados de saída 
+utilizar um método de construção
+teste e diagnóstico

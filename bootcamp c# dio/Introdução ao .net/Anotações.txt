@@ -1,0 +1,27 @@
+.net -> plataforma de desenvolvimento unificado
+
+c# -> linguagem de programação
+
+.net framework é diferente do .net core
+
+.net framework funciona somente em windows
+
+.net core funciona em linux e mac também.
+
+agora o nome mudou e é somente .net e a numeração da versão
+pra não ter confusão entre core e framework
+
+.net framework (legado)
+
+.net funciona em multiplataforma, praticamente reescrito do zero
+
+ja o .net framework está amarrado só para windows
+
+.net nativa (só roda em windows)
+
+core foi tirado do nome pois essa vai ser a principal
+implementação do .net
+
+
+
+

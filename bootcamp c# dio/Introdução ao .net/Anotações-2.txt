@@ -1,0 +1,2 @@
+dotnet new console -> cria uma aplicação do tipo console
+

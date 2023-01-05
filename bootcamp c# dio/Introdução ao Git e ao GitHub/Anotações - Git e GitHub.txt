@@ -53,4 +53,26 @@ git clone "link do git" -> clona o repositório do git pro computador
 
 ----------------------------------------------------------
 
+xemplo de envio de repositório do computador pra repositório vazio criado no github:
+
+
+Configuração rápida — se você já fez esse tipo de coisa antes
+ou	
+https://github.com/guisoLazaro/exercicios-curso-c--orientacao-objetos.git
+Comece criando um novo arquivo ou carregando um arquivo existente . Recomendamos que cada repositório inclua um README , LICENSE e .gitignore .
+
+…ou crie um novo repositório na linha de comando
+echo "# exercicios-curso-c--orientacao-objetos" >> README.md 
+git init 
+git add README.md 
+git commit -m "first commit" 
+git branch -M main 
+git remote add origin https://github.com /guisoLazaro/exercicios-curso-c--orientacao-objetos.git
+ git push -u origin main
+…ou envie um repositório existente a partir da linha de comando
+git remote add origin https://github.com/guisoLazaro/exercicios-curso-c--orientacao-objetos.git
+ git branch -M main 
+git push -u origin main
+…ou importar código de outro repositório
+Você pode inicializar este repositório com código de um projeto Subversion, Mercurial ou TFS.
 

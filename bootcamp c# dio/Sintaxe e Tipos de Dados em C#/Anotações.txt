@@ -1,0 +1,57 @@
+Classe -> abstração
+
+Abstração -> objeto no mundo real -> programação
+
+Identificar os objetos e colocar na classe, somente os que forem utilizar
+
+método -> ações que uma pessoa pode realizar, dentro da classe pessoa no caso 
+
+get -> pegar o valor
+set -> atribuir valor
+
+Nome = "gui" -> set
+
+namespace -> caminho para a classe
+
+pessoa1.Nome -> o ponto serve pra chamar os atributos da classe ou metodo
+
+para quebrar a linha é preciso adicionar o + para concatenar com a outra linha
+
+\n quebrar a linha também
+
+Cases:
+camelCase ->começa com a letra minuscula, na outra palavra maiuscula
+PascalCase -> ambas palavras começam com letra maiuscula
+snake_case -> tudo minusculo separado por underline
+spinal-case -> tudo minusculo com traço para separar/diferenciar
+
+Cases C#:
+Classes: utilizar sempre o PascalCase
+Propriedades/atributos: sempre usar o PascalCase
+nome de método: sempre usar o PascalCase
+
+Variaveis: utilizar o camelCase
+
+Não abreviar nomes de atributos de classe, devem estar o mais claro possivel
+
+Por convenção o nome do arquivo deve ser igual ao da classe.
+
+Convensão de nome e variavel:
+
+valores monetários: utilizar o tipo decimal no c# pois é mais preciso
+
+numeros decimais: double ou float
+
+Declaração de variaveis:
+
+string apresentacao = "Olá, seja bem vindo"; //declaração de variavel 
+int quantidade = 1; //declaração de variavel
+double altura = 1.80;
+decimal preco = 1.80M; //colocar m no final do tipo decimal
+
+bool condicao = true;
+
+DateTime dataAtual = DateTime.Now; ->pega a data atual do computador
+DateTime dataAtual = DateTime.Now.addDays(5)-> adiciona mais dias por exemplo na data
+
+

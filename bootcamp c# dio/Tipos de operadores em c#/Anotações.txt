@@ -1,0 +1,69 @@
+=  atribuição
+exemplo:
+int a = 10 -> atribui o valor 10 para a variavel a
+
+c += 5 -> somando o valor que já existe em c com o valor 5
+
+convertendo tipos de variaveis:
+
+int a = "5";
+
+casting:
+
+int a = Convert.ToInt32("5");
+
+outra maneira:
+
+int a = int.Parse("5");
+
+Diferença entre convert e parse:
+quando usa o convert passando um valor null ele converte pra 0
+já o parse não aceita nulo
+
+conversão para o tipo string:
+
+string a = 5;
+int inteiro = 5;
+string a = inteiro.ToString(); -> maneira para converter
+
+
+casting implícito:
+
+int a = 5;
+double b = a; -> um numero inteiro cabe no double, já um double não cabe no inteiro
+
+long a = long
+int b = Convert.ToInt32(a) -> converte de tipos maiores para inteiro
+porém:
+
+long a = long.MaxValue -> declarando como maxvalue não irá funcionar, pois extrapola o tamanho do inteiro
+
+
+Convertendo de maneira segura:
+string a = "15";
+int b = Convert.ToString(a);
+
+maneira correta
+int b = 0;
+int.TryParse(a, out b); -> se der erro ele ele atribui zero e continua o programa normalmente
+
+Exemplos Switch-Case:
+
+Console.WriteLine("Digite uma letra");
+string letra = Console.ReadLine();
+
+switch (letra)
+{
+	case "a":
+	case "e":
+	case "i":
+	case "o":
+	case "u":
+		Console.WriteLine("Vogal");
+		break;
+	default:
+		Console.WriteLine("Não é uma Vogal");
+		break;
+			
+	
+}

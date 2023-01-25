@@ -1,0 +1,46 @@
+Classe abstrata:
+Tem como objetivo ser exclusivamente um modelo para ser herdado
+portanto não pode ser instanciada
+Você pode implementar métodos ou deixá-los a cargo de quem herdar
+
+classe abstrata, não pode ser instanciada, só modelo
+
+   public Aluno(string nome) : base(nome) //construtor obrigatório na herança decla-se dessa maneira
+        {
+
+        }
+
+Classe selada:
+
+objetivo de impedir que outras classes fazem herança dela
+ou seja, nenhuma classe pode ser sua derivada
+métodos
+exemplo sintaxe classe selada:
+public sealed class Professor
+
+exemplo sintaxe método selado:
+
+public sealed double void Apresentar()
+{
+	
+}
+
+Classe object:
+
+A classe System.Objetct é a mãe de todas as classe na hierarquia do .NET
+
+Todas as classes derivam, direta ou indiretamente da classe
+object, e ela tem como objetivo prover serviços de baixo nível para suas classes filhas
+
+Interfaces:
+
+Um contrato que pode ser impleentado por uma classe
+É como se fosse uma classe abstrata, podendo definir métodos
+abstratos para serem implementados
+
+Assim como uma classe abstrata, uma interface não pode ser instanciada
+a classe que implementar a interface tem que obrigatoriamente implementar os métodos da interface
+
+pode -se implementar mais que uma interface em uma classe
+
+

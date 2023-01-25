@@ -1,0 +1,19 @@
+HTTP: PROTOCOLO DE COMUNICAÇÃO - CLIENTE/SERVIDOR
+
+CLIENVE ENVIA MENSAGENS REQUISITANDO,SERVIDOR RESPONDE USANDO O TCP/IP
+
+request - > envio da requisição http
+response -> envio da resposta e encerramento da conecção
+
+get -> Buscar informações
+post -> enviar informações(dados)
+
+cookies -> track -> rastrear informações do cliente -> para persistir dados no dispositivo do cliente
+
+cookies de sessão: quando encerra eles são apagados
+cookies de persistencia: podem ficar por anos lá
+
+cache: ao fazer uma requisição ao proxy, verifica se tem 
+as informações, caso não tenha ele faz um update do cache 
+para o envio das novas informações.
+

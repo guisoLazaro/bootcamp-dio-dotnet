@@ -1,0 +1,70 @@
+constraints -> regras para inserção em uma tabela:
+NOT NULL -  não permite valor nulo
+UNIQUE - Valor único em toda a tabela
+CHECK - Garante uma determinada condição
+DEFAULT - Valor padrão para inserção
+PRIMARY KEY - é uma combinação de not null e unique
+foreign key - garante que um registro exista em outra abela
+
+tornando nome unico na coluna
+ALTER TABLE Produtos
+ADD UNIQUE(nome)
+
+constraint check:
+
+ALTER TABLE Produtos
+ADD CHECK(Genero = 'U' OR Genero = 'M' OR Genero = 'F') ->só aceita os valores impostos como condição
+
+constraint default:
+ALTER TABLE Produtos 
+ADD DEFAULT GETDATE() FOR DataCadastro -> quando não insere a data ele pega a data atual por padrão
+
+apagando constraint:
+ALTER TABLE Produtos
+DROP CONSTRAINT "NOME DA CONSTRAINT"
+
+procedures: 
+salva os scripts padrão diretamente no banco, só altera os valores
+Criando procedure para inserção de dados:
+CREATE PROCEDURE InserirNovoProduto
+@Nome varchar(255),
+@Cor varchar(50),
+@Preco decimal,
+@Tamanho varchar(5),
+@Genero char(1)
+
+AS
+
+INSERT INTO Produtos(Nome, Cor, Preco, Tamanho, Genero)
+VALUES(@Nome, @Cor, @Preco, @Tamanho, @Genero)
+
+Executando procedure:
+EXEC InserirNovoProduto 'NOVO PRODUTO PROCEDURE',
+'COLORIDO',
+50,
+'G',
+'U'
+
+procedure para select:
+CREATE PROCEDURE ObterProdutosPorTamanho
+@Tamamho varchar(5)
+AS
+SELECT * FROM Produtos WHERE Tamanho = @Tamanho
+
+EXEC ObterProdutosPorTamanho 'P'
+
+function: obrigado a ter um retorno
+CREATE FUNCTION CalcularDesconto(@Preco decimal(13,2), @Porcentagem INT)
+RETURNS(13,2)
+BEGIN
+	@Preco - @Preco / 100 * @Porcentagem
+AND
+
+Chamando a function:
+SELECT 
+	Nome,
+	Preco,
+	dbo.CalcularDesconto(Preco, 10) PrecoComDesconto
+FROM Produtos WHERE Tamanho = 'M'
+
+

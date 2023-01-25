@@ -1,0 +1,7 @@
+comentario com // : é representado em uma única linha
+
+comentário com /* comentário */ : permite escrever com várias linhas
+
+comentário com <summary> : perimite documentar classes, métodos, parâmetros, etc
+
+/// ativa o summary

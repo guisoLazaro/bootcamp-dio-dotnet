@@ -1,0 +1,8 @@
+.sln -> solution -> serve pra referenciar os projetos
+
+Common -> modelo para varios projetos
+
+o método main fica implicito apartir da versão dotnet 6, fica escondido, porém está sendo usado
+
+dotnet new console --framwork net5.0 -> criação de projeto pelo terminal
+

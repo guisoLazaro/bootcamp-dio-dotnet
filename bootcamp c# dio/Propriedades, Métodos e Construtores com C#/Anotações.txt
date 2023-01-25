@@ -1,0 +1,20 @@
+Exemplo propriedades classe pessoa:
+
+get obtem valor.
+set atribui valor.
+
+get e set vazios aceitam qualquer valor.
+
+public e private:
+
+public -> qualquer um pode acessar a classe ou propriedade
+private -> só é permitido acessar dentro da própria classe
+
+obs: como saber se é campo ou propriedade: campo não tem get e set
+
+método -> ação que uma classe vai fazer
+
+public não faz parte de assinatura de um método
+
+Construtores: Permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler
+

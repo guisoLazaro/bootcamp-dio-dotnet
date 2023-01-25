@@ -1,0 +1,46 @@
+Tuplas:
+
+Tuplas fornece sintaxe concisa para agrupar vários elementos de dados em uma estrutura de dados leve
+
+não é uma coleção, mas pode ter dentro dela uma coleção
+
+pode retornar diversos valores, diferentes tipos em uma variavel
+
+exemplo:
+
+(int, string, string) tupla = (1, "Gui", "Lazaro"); //declaração da tupla - código, nome e sobrenome
+
+Console.WriteLine($"id: {tupla.Item1}");
+Console.WriteLine($"Nome: {tupla.Item2}");
+Console.WriteLine($"Sobrenome: {tupla.Item3}");
+
+outra forma de representar tupla:
+ValueTupla<int, string, string, decimal>outroExemplo = (1, "Gui", "Lazaro", 1.80M);
+
+para descartar uma informação que você não vai precisar no retorno:
+(sucesso, linhas, quantidade)
+(sucesso, linhas, _) -> colocar o underline caso não precise do retorno da quantidade
+
+Deconstrutor:
+
+public void Deconstruct(out string nome, out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
+
+Pessoa p1 = new Pessoa("Gui", "Buta");
+
+(string nome, string sobrenome) = p1; //desconstroi em variaveis eparadas
+System.Console.WriteLine($"{nome} {sobrenome}");
+
+
+
+
+if ternario:
+
+int numero = 15;
+bool ePar = false;
+
+ePar = numero % 2 ==0;
+Console.WriteLine($"O numero {numero} é " +(ePar ? "par" : "impar"));

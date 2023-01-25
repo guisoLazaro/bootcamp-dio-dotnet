@@ -1,0 +1,2 @@
+break -> interrompe o laço após uma determinada condição
+debugar o readline: mudar launch.json -> console : colocar integratedTerminal

@@ -1,0 +1,117 @@
+usando o count:
+contar quantas linha existem na tabela com determinada condição:
+
+SELECT COUNT(*) FROM Produtos
+
+nomeando coluna para retorno dos dados:
+SELECT COUNT(*) QuantidadeProdutos FROM Produtos
+
+count com condicional:
+SELECT COUNT(*) FROM Produtos WHERE  Tamanho = 'M'
+
+usando o SUM -> soma:
+SELECT SUM(Preco) FROM Produtos -> soma de todos itens da coluna preço da tabela produtos
+
+usando o MIN, MAX E AVG:
+SELECT MAX(Preco) FROM Produtos -> maior preço
+SELECT MIN(Preco) FROM Produtos -> menor preço
+SELECT AVG(Preco) FROM Produtos -> media de preço dos produtos
+
+concatenando colunas:
+SELECT
+    Nome + '-' + Cor -> concatena com um traço separando as colunas, pode ser qualquer texto no meio
+FROM Produtos
+
+concatenando colunas:
+SELECT
+    Nome + '-' + Cor NomeProduto -> concatena com um traço separando as colunas, pode ser qualquer texto no meio
+FROM Produtos
+obs: ao final foi colocado o nome da coluna que seram retornados os dados
+
+
+Upper e Lower:
+concatenando colunas:
+SELECT
+    Nome + '-' + Cor
+    UPPER(Nome) -> transforma em maiusculo
+    LOWER(Cor) -> transforma em minusculo
+FROM Produtos
+
+Adicionando uma nova coluna:
+ALTER TABLE Produtos -> alterar tabela de produtos
+ADD DataCadastro DATETIME2 -> add coluna datacadastro do tipo datetime2
+
+Adicionando valores na coluna nova:
+UPDATE Produtos SET DataCadastro = GETDATE()
+
+Deletando coluna:
+ALTER TABLE Produtos
+DROP COLUMN DataCadastro
+
+formatando uma data:
+SELECT
+  FORMAT(DataCadastro, 'dd-MM-yyyy HH:mm') Data
+FROM Produtos
+
+USANDO O GROUP BY:
+SELECT 
+    Tamanho
+    COUNT(*) Quantidade FROM Produtos -> conta as quantidades agrupando pelo tamanho, coluna quantidade criada para retornar os dados
+    WHERE Tamanho != '' -> tamanho diferente de vazio
+    GROUP BY Tamanho
+    ORDER BY Quantidade DESC -> ordena na tabela quantidade criada agora em ordem decrescente
+ordem dos comantos:
+select, where, group by, order by
+
+
+criação de tabela com fk e pk
+CREATE TABLE Enderecos (
+	Id int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	IdCliente int NULL,
+	Rua varchar(255) NULL,
+	Bairro varchar(255) NULL,
+	Cidade varchar(255) NULL,
+	Estado char(2) NULL,
+
+	CONSTRAINT FK_Enderecos_Clientes FOREIGN KEY(IdCliente) ->cria fk na coluna IdCliente referenciando a tabela clientes coluna Id
+	REFERENCES Clientes(Id)
+)
+
+USANDO INNER JOIN:
+
+SELECT
+   *
+FROM
+   Clientes
+INNER JOIN Enderecos ON Clientes.Id = Enderecos.IdCLiente -> clientes.id tem que ser igual enderecos.idcliente
+WHERE Clientes.Id = 4
+
+refinando o select:
+
+SELECT
+   Clientes.Nome,
+   Clientes.Sobrenome,
+   Clientes.Email,
+   Enderecos.Rua,
+   Enderecos.Bairro,
+   Enderecos.Cidade,
+   Enderecos.Estado
+FROM
+   Clientes
+INNER JOIN Enderecos ON Clientes.Id = Enderecos.IdCLiente
+WHERE Clientes.Id = 4
+
+ou, nomeia-se a tabela pra ficar mais enchuto
+
+SELECT
+   C.Nome,
+   Clientes.Sobrenome,
+   C.Email,
+   E.Rua,
+   E.Bairro,
+   E.Cidade,
+   E.Estado
+FROM
+   Clientes C
+INNER JOIN Enderecos E ON Clientes.Id = Enderecos.IdCLiente
+WHERE Clientes.Id = 4

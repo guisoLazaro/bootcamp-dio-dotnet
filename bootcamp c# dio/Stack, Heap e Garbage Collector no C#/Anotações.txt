@@ -1,0 +1,25 @@
+Stack:
+
+int a = 5; ->vai para a memória stack, ultimo a entrar, primeiro a sair
+
+Pessoa p1 = new Pessoa(); -> p1 vai para o stack e armazena uma referencia para a memória heap, o objeto em si fica na memória heap
+
+Limpeza de memória:
+
+quando termina a execução ele vai matando as variaveis na memória stack
+A memória heap quem limpa é o garbage collector, 
+quando o objeto não tem mais nenhuma referencia com a memória stack, 
+ai o garbage collector faz essa verificação e mata o objeto caso ele não esteja em uso
+
+Tipos de valor: eles mesmos armazenam o seu valor, 
+não precisando buscar em outro lugar
+
+Tipos de referência: precisa buscar a referência em outro tipo
+de memória para obter o valor
+
+Memória heap não tem uma ordem especifica para armazenar
+e nem remover os dados, ela é mais dinâmica
+
+Tipos complexos com atribuição altera o valor dos dois
+pois apontam para uma mesma referencia de objeto na heap
+

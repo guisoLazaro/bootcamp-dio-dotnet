@@ -1,0 +1,19 @@
+dado estruturado: dado organizdo que você pode recuperar depois
+
+Banco de dados relacional:
+dados estruturados, organizados em tabelasm com colunas e linhas, que se relacionam entre si.
+
+quando uma tabela se relaciona com outra
+tem que ter um id fazendo apontamento ao id da outra
+
+
+Banco de dados não relacional:
+não são armazenados em tabela, e sim em armazenados de
+maneira não estruturadas ou semi-estruturadas.
+
+DBMS:
+É um software utilizado para acessar, manipular e monitorar um sistema
+de banco de dados
+
+
+

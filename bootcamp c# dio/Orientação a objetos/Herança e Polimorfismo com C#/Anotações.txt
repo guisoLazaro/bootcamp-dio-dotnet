@@ -1,0 +1,8 @@
+Herança:
+
+uma classe herda atibutos, métodos e comportamentos de outra classe
+
+uma classe só pode herdar de uma classe de uma vez só
+
+polimosrfismo -> sobrescrever para implementar de maneira diferente
+

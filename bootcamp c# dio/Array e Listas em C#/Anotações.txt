@@ -1,0 +1,16 @@
+declaração array c#: int[] array = new int[4] -> quantidade de valores
+int[] array = new int[] {42,75,74,61} -> declaração sem mencionar quantidade, mas atribuindo os valores já em suas posições
+
+Length -> capacidade total do array
+
+Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2); -> aumenta a posição do array em execução
+
+obs: Array.Resize faz uma "cópia do array", pois o array nasce e morre com a sua capacidade que foi declarada.
+
+int[] arrayInteirosDourado = new int[arrayInteiros.Length * 2]; //declaração de um novo array, com o dobro da capacidade do primeiro
+Array.Copy(arrayInteiros, arrayInteirosDourado, 3); //copia o conteudo de um array para outro, com a quantidade total do outro.
+
+List<string> listaString = new List<string>(); //declaração de uma lista
+
+lista não precisa de tamanho de capacidadee, aumenta conforme for adicionando elementos
+

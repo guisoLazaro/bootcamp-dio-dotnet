@@ -1,0 +1,93 @@
+Linguagem SQL:
+usado para consulta e manipulação de dados
+
+ordenando resultados:
+select * from Clientes
+oderder by nome
+
+select * from clientes
+order by nome, sobrenome
+
+trazendo colunas:
+
+select nome, sobrenome, email from clientes
+
+filtro por nome
+SELECT * FROM Clientes
+WHERE Nome = 'Adam'
+ORDER BY Nome, Sobrenome
+
+filtro por nome AND sobrenome
+SELECT * FROM Clientes
+WHERE Nome = 'Adam' AND Sobrenome = 'Reynolds'
+ORDER BY Nome, Sobrenome
+
+filtro usando o OR, qualquer uma das condições que for verdadeira ele trás
+SELECT * FROM Clientes
+WHERE Nome = 'Adam' OR Sobrenome = 'Reynolds'
+ORDER BY Nome, Sobrenome
+
+filtra colunas aceitacomunicados com dado 1, de todos clientes
+SELECT * FROM Clientes
+WHERE AceitaComunicados = 1
+ORDER BY Nome, Sobrenome
+
+
+
+filta todos clientes que começam com G:
+SELECT * FROM Clientes
+WHERE Nome LIKE 'G%'
+ORDER BY Nome, Sobrenome
+
+filta todos clientes que tem a letra g independente da posição
+SELECT * FROM Clientes
+WHERE Nome LIKE '%G%'
+ORDER BY Nome, Sobrenome
+
+
+inserção de registro:
+INSERT INTO Clientes (Nome, Sobrenome, Email, AceitaComunicados, DataCadastro)
+VALUES('Leonardo', 'Buta', 'email@email.com', 1 GETDATE())
+
+inserção omitindo as colunas:
+INSERT INTO Clientes VALUES('Leonardo', 'Buta', 'email@email', 1, GETDATE())
+
+
+update de registros: -> atualiza o e-mail do Id 1003, sempre usar o ID pois ele é unico
+UPDATE Clientes
+SET Email = 'emailatualizado@email.com'
+WHERE Id = 1003
+
+update de registros, mais de um campo: -> atualiza o e-mail do Id 1003, sempre usar o ID pois ele é unico
+UPDATE Clientes
+SET Email = 'emailatualizado@email.com',
+    AceitaComunicados = 0
+WHERE Id = 1003
+
+update sem where:
+update de registros: -> atualiza o e-mail do Id 1003, sempre usar o ID pois ele é unico
+UPDATE Clientes
+SET Email = 'emailatualizado@email.com'
+
+antes: colocar BGIN TRAN ROLLBACK -> pode voltar alterações
+sem o where ele atualiza todos os dados, só faça se for necessário alterar todos dados das colunas que foram passados
+
+Deletando um registro:
+DELETE Clientes
+WHERE Id = 1001
+
+criação de tabela:
+CREATE TABLE Produtos(
+	Id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	Nome varchar(255) NOT NULL,
+	Cor varchar(50) NULL,
+	Preco decimal(13, 2) NOT NULL,
+	Tamanho varchar(5) NULL,
+	Genero char(1) NULL
+)
+
+
+
+
+
+

@@ -67,3 +67,11 @@ switch (letra)
 			
 	
 }
+
+Operadores lógicos:
+
+OR, ||, ou -> uma verdadeira retorna verdadeiro
+
+AND, &&, e -> é necessário que todas sejam verdadeiras
+
+NOT, !, negação -> nega o valor

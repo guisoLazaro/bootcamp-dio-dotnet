@@ -1,0 +1,12 @@
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\bin\Debug\net7.0\ExemploFundamentos.Common.deps.json
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\bin\Debug\net7.0\ExemploFundamentos.Common.dll
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\bin\Debug\net7.0\ExemploFundamentos.Common.pdb
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.csproj.AssemblyReference.cache
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.AssemblyInfoInputs.cache
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.AssemblyInfo.cs
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.csproj.CoreCompileInputs.cache
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.dll
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\refint\ExemploFundamentos.Common.dll
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ExemploFundamentos.Common.pdb
+C:\gitbootcampdio\bootcamp-dio-dotnet\bootcamp c# dio\Introdução ao .net\ExemploFundamentos\ExemploFundamentos.Common\obj\Debug\net7.0\ref\ExemploFundamentos.Common.dll

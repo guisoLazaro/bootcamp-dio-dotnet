@@ -1,0 +1,8 @@
+classe é uma representação de um objeto do mundo real
+objeto é a concretização dessa classe
+
+paradigma -> conjunto de regras
+
+Encapsulamento -> proteger a classe e definir limites para alteração das propriedades
+serve também para ocultar seu comportamento e expor somente o necessário.
+

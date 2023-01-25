@@ -1,0 +1,55 @@
+um pacote é um conjunto de códigos úteis, que possibilita 
+o compartilhamento e reuso do código
+
+Nuget -> é um gerenciador de pacotes, que permite desenvolvedores compartilharem códigos e bibliotecas.
+
+Serialização de dados:
+
+O processo de transformar objetos em um fluxo de bytes para seu armazenamento ou transmissão
+
+deserialização -> objeto passa de um arquivo por exemplo para o programa
+serialização -> objeto do programa para arquivo
+
+json -> é um formato de texto que segue a sintaxe do javascript, muito usado para transmitir dados entre aplicações.
+
+json ->arquivo de texto que representa um objeto
+
+using Newtonsoft.Json;
+
+Venda v1 = new Venda(1, "Material de escritório", 25.00M);
+string serializado = JsonConvert.SerializeObject(v1); //serializa o objeto em arquivo json
+
+string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented); //serializa o objeto em arquivo json
+
+File.WriteAllText("Arquivos/vendas.json", serializado); //coloca o objeto serializado em um arqivo
+
+Console.WriteLine(serializado);
+
+
+//declara lista para serializar mais que uma venda
+List<Venda> listaVendas = new List<Venda>();
+
+Venda v1 = new Venda(1, "Material de escritório", 25.00M);
+Venda v2 = new Venda(2, "licençã de Software", 110.00M);
+
+//adiciona as vendas
+listaVendas.Add(v1);
+listaVendas.Add(v2);
+
+//serializa as vendas
+string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented); //serializa o objeto em arquivo json
+
+File.WriteAllText("Arquivos/vendas.json", serializado); //coloca o objeto serializado em um arqivo
+
+Console.WriteLine(serializado);
+
+//deserializando objeto:
+string conteudoArquivo = File.ReadAllText("Arquivos/vendas/vendas.json");
+
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+foreach (Venda venda in listaVenda)
+{
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto} - Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+}
+

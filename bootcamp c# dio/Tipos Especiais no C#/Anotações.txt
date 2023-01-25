@@ -1,0 +1,57 @@
+Tipo de valor nulo:
+um tipo de valor nulo permite representar o tipo da variavel e adicionamente, o valor nulo
+
+bool = true, false
+bool?= true, false, null
+
+exemplo:
+
+
+bool? desejaReceberEmail = null; //valor nulo para boleano precisa por o interrogação
+
+
+if(desejaReceberEmail.HasValue && desejaReceberEmail.Value) //se tem um valor diferente de nulo ele avisa que optou por receber o e-mail
+{
+    System.Console.WriteLine("O usuário optou por receber e-mail");
+}
+else
+{
+    System.Console.WriteLine("O usuário não respondeu ou optou por não receber e-mail");
+}
+
+public decimal? Desconto {get; set;} -> com o sinal de interrogação mostra que pode ser nulo
+
+tipo anonimo:
+
+var tipoAnonimo = new {Nome = "Gui", Sobrenome = "Lazaro", Altura = 1.65};
+
+var listaAnonimo = listaVenda.Select(x => new { x.Produto, x.Preco }); //tipos anonimos de uma coleção
+
+variavel dinamica:
+
+dynamic variavelDinamica = 4 // o tipo muda de acordo com o valor que é passado pra ela
+
+classe generica:
+
+ public class MeuArray<T> // T não diz o que é.. você define na instância da classe
+    {
+        private static int capacidade = 10;
+        private int contador = 0;
+        private T[] array = new T[10];
+
+        public void AdicionarElementoArray(T elemento)
+        {
+            if (contador + 1< 11)
+            {
+                array[contador] = elemento;
+            }
+            contador++;
+        }
+
+        public T this[int index]
+        {
+            get { return array[index]; }
+            set { array[index] = value; }
+        }
+    }
+

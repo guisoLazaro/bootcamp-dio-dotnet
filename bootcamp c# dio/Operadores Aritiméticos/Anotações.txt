@@ -1,0 +1,1 @@
+Math.Round(variavel, 4) -> passa a variavel e o numero de casas p/ arredondar

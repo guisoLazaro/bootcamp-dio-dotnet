@@ -1,0 +1,81 @@
+Exeptions
+
+Os recursos de manipulação de exeção da linguagem C#
+ajudam a você a lidar com quaisquer situações exepcionais ou
+inesperadas que ocorram quando um programa for executado
+
+Coleção fila:
+
+quem entra primeiro sai primeiro, quem entra por ultimo sai por ultimo
+
+exemplo:
+
+Queue<int> fila = new Queue<int>(); //declaração de fila
+fila.Enqueue(2); //adiciona elemento na fila
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+foreach(int item in fila) //percorre a fila
+{
+    Console.WriteLine(item);
+}
+
+fila.Dequeue(); //remove um elemento da fila (sempre o primeiro elemento, não pode passar paramentos)
+
+
+coleção pilha:
+
+o ultimo que entrou será o primeiro a sair
+
+exemplo:
+
+ /*Stack<int> pilha = new Stack<int>(); //declara uma pilha
+
+pilha.Push(4); //insere um elemento no topo da pilha
+pilha.Push(6);
+pilha.Push(8);
+pilha.Push(10);
+
+foreach(int item in pilha) //percorre a pilha
+{
+    Console.WriteLine(item);
+}
+
+pilha.Pop(); //remove um elemento da pilha, sempre o ultimo no caso o do topo
+
+*/
+
+coleção dictionary
+
+exemplo:
+
+/*Dictionary<string, string> estados = new Dictionary<string, string>(); //declaração de cicionario, tem dois tipos pois um é a chave(unica) e outra é o conteudo/dado
+
+estados.Add("SP", "São Paulo");
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas gerais");
+
+
+foreach(var item in estados)
+{
+    Console.WriteLine($"Chave: {item.Key}, valor: {item.Value}");
+}
+
+estados.Remove("BA"); //remove item da chave BA;
+
+estados["SP"] = "São Paulo - valor alterado"; //altera o valor da chave, a chave não é possivel alterar somente remover e colocar outra
+
+
+string chave = "BA";
+if(estados.ContainsKey(chave)) //verifica se já tem a chave, caso não tenha informa que pode colocar.
+{
+    System.Console.WriteLine("Valor existente");
+}
+else
+{
+    System.Console.WriteLine("Valor não existe, pode adicionar");
+}
+
+Console.WriteLine(estados["MG"]); //acessa conteudo da chave mg
+*/

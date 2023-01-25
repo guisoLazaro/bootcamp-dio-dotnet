@@ -1,0 +1,34 @@
+formatar moeda:
+
+decimal valorMonetario = 82.40M;
+
+Console.WriteLine($"{valorMonetario:C}"); //reais
+
+//mutando a localização do sistema para formatação monetária
+using System.Globalizarion;
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US);
+
+Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-Us)); //força formatação se já foi configurado pra uma especifica
+
+
+Console.WriteLine(valorMonetario.ToString("C2")); //formata as casas decimais da moeda configurada
+
+formatar porcentagem:
+
+double porcentagem = .3421;
+Console.WriteLine(porcentagem.ToString("P")); = 34,21%
+
+
+//formatando datetime:
+
+DateTime data = DateTime.Now; //data e hora atual do computador
+
+data.ToString("dd/MM/yyyy HH:mm"); //dia, mes, ano, hora, minutos
+
+Console.WriteLine(data.ToShortDateString()); //so mostra a data
+Console.WriteLine(data.ToShortTimeString()); //pega a hora só
+
+
+DateTime data = DateTime.Parse("17/01/2023 18:00"); //coloca uma data especifica e converte pra datetime
+
+DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime data); //converte a data que você passa (dateString) ele evita erros mas retorna algo mesmo assim.

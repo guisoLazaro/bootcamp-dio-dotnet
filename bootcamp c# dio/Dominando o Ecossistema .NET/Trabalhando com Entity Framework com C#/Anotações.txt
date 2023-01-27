@@ -1,0 +1,40 @@
+entity -> facilita a conecção e comunicação com o banco de dados
+
+CRUD:
+C - CREATE (INSERT)
+R - READ (SELECT)
+U - UPDATE (UPDATE)
+D - DELETE (DELETE)
+
+ferramenta entity, tem que ser instalada em todo projeto:
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+instalação do entity:
+dotnet tool install --global dotnet-ef
+
+  "ConnectionStrings": {
+    "ConexaoPadrao": ""Server=localhost\\sqlexpress;Initial Catalog=Agenda;Integrated Security=True; TrustServerCertificate=True"" -> string de conexão e criação do banco de dados no arquivo json development
+
+
+craiar
+migrations:
+dotnet-ef migrations add CriacaoTabelaContato
+
+executar migrations criada:
+dotnet-ef database update
+
+Controller e endpoint de create
+
+Verbos http:
+
+POST -> CREATE
+GET -> OBTER INFORMAÇÃO
+PUT -> ATUALIZRA/UPDATE -> INFORMAÇÃO COMPLETA
+PATCH -> ATUALIZAÇÕES/INFORMAÇÕES -> INFORMAÇÃO PARCIAL
+DELETE -> DELETA INFORMAÇÕES/RECURSOS EXISTENTES
+
+controllers:
+pontos de entrada em que vão ser disponibilizados os métodos
+
+

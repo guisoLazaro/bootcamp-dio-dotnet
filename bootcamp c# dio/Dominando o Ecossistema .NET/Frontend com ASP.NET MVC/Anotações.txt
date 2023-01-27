@@ -1,0 +1,5 @@
+model -> intidades, classes
+view -> parte visual de exibição pro usuário/ dados da model
+controller -> acontece a lógica
+
+

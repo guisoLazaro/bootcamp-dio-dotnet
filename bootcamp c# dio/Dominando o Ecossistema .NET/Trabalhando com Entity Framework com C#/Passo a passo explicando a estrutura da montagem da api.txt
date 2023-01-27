@@ -1,0 +1,44 @@
+Projeto para api, estrutura:
+Criar pasta context, nela vai ser criada as controllers
+de conexão com o banco
+delacaração da classe:
+nome da classe herdando a classe DbContext do pacote:
+Microsoft.EntityFrameworkCore;
+Delcara-se após, um construtor passando:
+DbContextOptions<AgendaContext> options : base(options) //base da clase DbContext
+
+após, é criado um método que cria a tabela contatos:
+public DbSet<Contato> Contatos {get; set;} ->passa a classe contato e cria a tabela contatos
+
+
+Cria a pasta controllers do tipo controller
+nela é criado as classes aonde vão ficar as api controllers
+Estrutura:
+Necessário importar as classes context e contato
+na declaração, herdar a classe ControllerBase
+importante: usar o pacote entity
+
+cria-se uma propriedade privada do tipo AgendaContext _context
+após, cria-se um construtor:
+com o parametro AgendaContext context -> que vai ser atribuido a propriedade privada
+
+após cria-se o [HttpPost] -> não é necessário passar um nome, pois vai ser post, para pegar os dados
+public IActionResult Create(Contato contat) //cria um contato  na tabela contatos
+{
+	_context.Add(contato); //pega o parametro contato e adiciona na tabela
+	_context.SaveChanges(); //salva na tabela
+	return Ok(contato); //retorna o contato após criado
+	
+}
+
+após é criado o [HttpGet("{id}")]
+para buscar as informações na tabela, utilizando o parametro id para retorno dos dados
+
+public IActionResult ObterPorId(int id) //necessário o id para obter as informações
+{
+	var contato = _context.Contatos.Find(id) -> passa o id utilizando a propriedade _context.Contatos que no caso busca na tabela contatos que foi criada
+	if(contato == null)
+	{
+		return NotFound(); -> se o contato for nulo/nao tiver, ele retorna o erro 404, pois nao encontrou nada
+	}
+	return Ok(contato); -> se encontro retorna as informações

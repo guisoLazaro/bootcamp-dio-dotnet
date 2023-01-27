@@ -1,0 +1,6 @@
+api -> forma de comunicação entre computadores ou programas de computadores
+software que fornece informações para outro.
+
+dog api
+dotnet whatch run -> executar
+dotnet new webapi -> criar api
